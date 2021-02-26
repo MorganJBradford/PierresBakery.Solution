@@ -25,16 +25,19 @@ namespace Bakery.Tests
     [TestMethod]
     public void GetBreadPrice_ReturnsOrderPrice_Int()
     {
-      int orderedBread = 2;
+      int orderedBread = 0;
       BreadOrder newBreadOrder = new BreadOrder(orderedBread);
       int result = newBreadOrder.BreadPrice;
       Assert.AreEqual(0, result);
     }
 
-    // [TestMethod]
-    // public void SetBreadPrice_ReturnsPriceMultipliedByBread_Int()
-    // {
-
-    // }
+    [TestMethod]
+    public void SetBreadPrice_ReturnsPriceMultipliedByBread_Int()
+    {
+      int orderedBread = 2;
+      BreadOrder newBreadOrder = new BreadOrder(orderedBread);
+      int result = newBreadOrder.BreadPrice;
+      Assert.AreEqual(10, result);
+    }
   }
 }
