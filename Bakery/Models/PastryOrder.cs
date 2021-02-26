@@ -7,7 +7,6 @@ namespace Bakery.Models
     public int SalePrice { get; set; }
     public int PastriesPrice { get; set; }
   
-
     public PastryOrder(int orderedPastries)
     {
       OrderedPastries = orderedPastries;
@@ -18,10 +17,11 @@ namespace Bakery.Models
 
     public void SetPastriesPrice()
     {
+      int[] emptyIntArray = new int[OrderedPastries];
       PastriesPrice += BasePrice * OrderedPastries;
-      if (OrderedPastries % 3 == 0)
+      if (OrderedPastries > 2)
       {
-        PastriesPrice -= 1;
+        PastriesPrice -= emptyIntArray.Length / 3;
       }
     }
   }

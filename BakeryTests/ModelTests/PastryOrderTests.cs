@@ -51,5 +51,15 @@ namespace Bakery.Tests
       int result = newPastryOrder.PastriesPrice;
       Assert.AreEqual(7, result);
     }
+
+    [TestMethod]
+    public void SetPastriesPrice_ReturnsPriceForFivePastries_Int()
+    {
+      int orderedPastries = 5;
+      PastryOrder newPastryOrder = new PastryOrder(orderedPastries);
+      newPastryOrder.SetPastriesPrice();
+      int result = newPastryOrder.PastriesPrice;
+      Assert.AreEqual(9, result);
+    }
   }
 }
