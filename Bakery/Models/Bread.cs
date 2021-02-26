@@ -15,16 +15,20 @@ namespace Bakery.Models
     public void SetBreadPrice()
     {
       BreadPrice = OrderedBread * 5;
-        if (OrderedBread % 3 == 0)
+      foreach(KeyValuePair<int, int> entry in myDictionary)
+      {
+        if (OrderedBread == entry.Key)
         {
-        BreadPrice -= BreadPrice / 3;
+          BreadPrice -= entry.Value;
         }
-        foreach(KeyValuePair<int, int> entry in myDictionary)
-        {
-          if (OrderedBread == entry.Key)
-          {
-            BreadPrice -= entry.Value;
-          }
+      }
+      if (OrderedBread % 3 == 0)
+      {
+        BreadPrice -= BreadPrice / 3;
+      }
+      else if (OrderedBread % 2 == 0 && OrderedBread != 2)
+      {
+        BreadPrice -= BreadPrice / 4;
       }
     }
   }
