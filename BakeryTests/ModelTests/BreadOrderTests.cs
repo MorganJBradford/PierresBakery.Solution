@@ -70,6 +70,7 @@ namespace Bakery.Tests
       int result = newBreadOrder.BreadPrice;
       Assert.AreEqual(25, result);
     }
+    
     [TestMethod]
     public void SetBreadPrice_ReturnsEvenNumberedPrices_Int()
     {
