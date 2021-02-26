@@ -1,7 +1,9 @@
-namespace ProjectName
+namespace Bakery.Models
 {
-  public class ClassName
+  public class BreadOrder
   {
-    // properties, constructors, methods, etc. go here
+    // public int BreadOrder { get; set; }
+    // public int BreadPrice { get; set; }
+
   }
 }
