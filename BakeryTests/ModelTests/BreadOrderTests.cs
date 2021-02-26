@@ -9,7 +9,7 @@ namespace Bakery.Tests
     [TestMethod]
     public void  BreadOrderConstructor_CreatesInstanceOfBreadOrder_BreadOrder()
     {
-      BreadOrder newBreadOrder = new BreadOrder(2);
+      BreadOrder newBreadOrder = new BreadOrder(2, 5);
       Assert.AreEqual(typeof(BreadOrder), newBreadOrder.GetType());
     }
 
@@ -17,7 +17,8 @@ namespace Bakery.Tests
     public void GetBreadOrder_ReturnsBreadOrdered_Int()
     {
       int orderedBread = 2;
-      BreadOrder newBreadOrder = new BreadOrder(orderedBread);
+      int breadPrice = 5;
+      BreadOrder newBreadOrder = new BreadOrder(orderedBread, breadPrice);
       int result = newBreadOrder.OrderedBread;
       Assert.AreEqual(orderedBread, result);
     }
@@ -25,8 +26,9 @@ namespace Bakery.Tests
     [TestMethod]
     public void GetBreadPrice_ReturnsOrderPrice_Int()
     {
+      int orderedBread = 2;
       int breadPrice = 10;
-      BreadOrder newBreadOrder = new BreadOrder(breadPrice);
+      BreadOrder newBreadOrder = new BreadOrder(orderedBread, breadPrice);
       int result = newBreadOrder.BreadPrice;
       Assert.AreEqual(breadPrice, result);
     }

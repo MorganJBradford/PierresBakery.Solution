@@ -4,9 +4,10 @@ namespace Bakery.Models
   {
     public int OrderedBread { get; set; }
     public int BreadPrice { get; set; }
-    public BreadOrder(int breadOrder)
+    public BreadOrder(int breadOrder, int breadPrice)
     {
       OrderedBread = breadOrder;
+      BreadPrice = breadPrice;
     }
   }
 }
