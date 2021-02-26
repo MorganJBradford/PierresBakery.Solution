@@ -13,12 +13,22 @@ namespace Bakery.Tests
       Assert.AreEqual(typeof(PastryOrder), newPastryOrder.GetType());
     }
 
-        [TestMethod]
+    [TestMethod]
     public void GetOrderedPastries_ReturnsPastriesOrdered_Int()
     {
       int orderedPastries = 2;
       PastryOrder newPastryOrder = new PastryOrder(orderedPastries);
       int result = newPastryOrder.OrderedPastries;
+      Assert.AreEqual(orderedPastries, result);
+    }
+
+    [TestMethod]
+    public void SetPastriesPrice_ReturnsPriceForTwoPastries_Int()
+    {
+      int orderedPastries = 2;
+      PastryOrder newPastryOrder = new PastryOrder(orderedPastries);
+      newPastryOrder.SetPastriesPrice();
+      int result = newPastryOrder.PastriesPrice;
       Assert.AreEqual(orderedPastries, result);
     }
   }
