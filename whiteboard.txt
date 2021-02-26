@@ -1,3 +1,31 @@
+Pastry = multiple of 3 price - x$2
+
+OrderedPastries = 3.
+BasePrice = $2 * OrderedPastries.
+DealPrice = 3
+if (OrderedPastries % 3 = 0)
+ PastriesPrice -= 
+
+
+multiple of 3 price -= DealPrice / BasePrice;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-------------
+<<<<<<<PASTRY
+BREAD>>>>>>>>
+-------------
 totalPrice = breadOrder * 5;
 
 Dictionary<int, int> myDictionary = new Dictionary<int, int>() { {5, 5}, {7, 10} };
