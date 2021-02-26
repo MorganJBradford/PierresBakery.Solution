@@ -9,5 +9,9 @@ namespace Bakery.Models
       OrderedBread = breadOrder;
       BreadPrice = 0;
     }
+    public void SetBreadPrice()
+    {
+      BreadPrice = OrderedBread * 5;
+    }
   }
 }

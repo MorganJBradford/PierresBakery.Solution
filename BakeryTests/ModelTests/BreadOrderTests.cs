@@ -36,6 +36,7 @@ namespace Bakery.Tests
     {
       int orderedBread = 2;
       BreadOrder newBreadOrder = new BreadOrder(orderedBread);
+      newBreadOrder.SetBreadPrice();
       int result = newBreadOrder.BreadPrice;
       Assert.AreEqual(10, result);
     }
