@@ -6,7 +6,7 @@ namespace Bakery.Models
     // public int BreadPrice { get; set; }
     public BreadOrder(int breadOrder)
     {
-
+      OrderedBread = breadOrder;
     }
   }
 }
