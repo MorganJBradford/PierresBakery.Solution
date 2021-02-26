@@ -42,7 +42,7 @@ namespace Bakery.Tests
     }
 
     [TestMethod]
-    public void SetBreadPrice_ReturnsPriceReducedByOne_Int()
+    public void SetBreadPrice_ReturnsPriceForOneFreeLoaf_Int()
     {
       int orderedBread = 3;
       BreadOrder newBreadOrder = new BreadOrder(orderedBread);
