@@ -1,0 +1,15 @@
+totalPrice = breadOrder * 5;
+
+
+if (breadOrder % 3 == 0)
+{
+  totalPrice -= (breadOrder * 5) / 3;
+}
+else if (breadOrder % 5 == 0)
+{
+  totalPrice -= (breadOrder * 5) / 3;
+}
+else if (breadOrder % 7 == 0)
+{
+  totalPrice -= (breadOrder * 5) / 3;
+}
