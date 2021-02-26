@@ -29,7 +29,7 @@ namespace Bakery.Tests
       PastryOrder newPastryOrder = new PastryOrder(orderedPastries);
       newPastryOrder.SetPastriesPrice();
       int result = newPastryOrder.PastriesPrice;
-      Assert.AreEqual(orderedPastries, result);
+      Assert.AreEqual(4, result);
     }
   }
 }
