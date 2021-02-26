@@ -40,5 +40,15 @@ namespace Bakery.Tests
       int result = newBreadOrder.BreadPrice;
       Assert.AreEqual(10, result);
     }
+
+    [TestMethod]
+    public void SetBreadPrice_ReturnsPriceReducedByOne_Int()
+    {
+      int orderedBread = 3;
+      BreadOrder newBreadOrder = new BreadOrder(orderedBread);
+      newBreadOrder.SetBreadPrice();
+      int result = newBreadOrder.BreadPrice;
+      Assert.AreEqual(10, result);
+    }
   }
 }
