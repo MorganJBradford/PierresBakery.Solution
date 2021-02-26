@@ -1,20 +1,35 @@
 totalPrice = breadOrder * 5;
 
+Dictionary<int, int> myDictionary = new Dictionary<int, int>() { {5, 5}, {7, 10} };
 
-if (breadOrder % 3 == 0)
+foreach(KeyValuePair<int, int> entry in myDictionary)
 {
-  totalPrice -= (breadOrder * 5) / 3;
+    if (breadOrder % 3 == 0)
+  {
+    totalPrice -= (breadOrder * 5) / 3;
+  }
+  else if (breadOrder.ContainsKey(entry))
+  {
+    totalPrice -= entry.Value;
+  }
 }
-else if (breadOrder % 5 == 0)
+
+for (int i = 0; i < dictionary.Length; i++)
 {
-  $25
-  totalPrice -= 5;
-}
-else if (breadOrder % 7 == 0)
-{
-  totalPrice -= -10;
-}
-else 
-{
-  total price -= 
+  if (breadOrder % 3 == 0)
+  {
+    totalPrice -= (breadOrder * 5) / 3;
+  }
+  else if (breadOrder.ContainsKey(i))
+  {
+    totalPrice -= value[i];
+  }
+  else if (breadOrder % 7 == 0)
+  {
+    totalPrice -= -10;
+  }
+  else 
+  {
+    total price -= 
+  }
 }
