@@ -10,7 +10,10 @@ namespace Bakery.Models
 
     public PastryOrder(int orderedPastries)
     {
-
+      OrderedPastries = orderedPastries;
+      BasePrice = 2;
+      SalePrice = 3;
+      PastriesPrice = 0;
     }
   }
 }
