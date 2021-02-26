@@ -15,5 +15,14 @@ namespace Bakery.Models
       SalePrice = 3;
       PastriesPrice = 0;
     }
+
+    public void SetPastriesPrice()
+    {
+      PastriesPrice += BasePrice * OrderedPastries;
+      if (OrderedPastries % 3 == 0)
+      {
+        PastriesPrice -= 1;
+      }
+    }
   }
 }
