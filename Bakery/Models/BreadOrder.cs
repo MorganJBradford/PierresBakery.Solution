@@ -15,7 +15,8 @@ namespace Bakery.Models
     {
       int[] emptyIntArray = new int[OrderedBread];
       BreadPrice = OrderedBread * 5;
-      if (OrderedBread > 2) {
+      if (OrderedBread > 2)
+      {
         BreadPrice -= (emptyIntArray.Length / 3) * 5;
       }
     }
