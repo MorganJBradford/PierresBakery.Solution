@@ -48,6 +48,11 @@ Next, enter 'dotnet run'.
 
 Finally, follow the instructions in your terminal.
 
+## Testing
+
+If you have installed this repo and would like to utilize the testing, follow these steps:
+
+To Navigate to the testing directory from the directory you downloaded the program to enter cd PierresBakery.Solution/BakeryTests'. One in this directory, enter 'dotnet restore' to install the dependencies required to utilize the testing. Lastly, enter 'dotnet test' to run the tests.
 
 ## Known Bugs
 

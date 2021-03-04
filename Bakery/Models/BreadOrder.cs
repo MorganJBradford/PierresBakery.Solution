@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 namespace Bakery.Models
 {
   public class BreadOrder
@@ -13,11 +12,10 @@ namespace Bakery.Models
 
     public void SetBreadPrice()
     {
-      int[] emptyIntArray = new int[OrderedBread];
       BreadPrice = OrderedBread * 5;
       if (OrderedBread > 2)
       {
-        BreadPrice -= (emptyIntArray.Length / 3) * 5;
+        BreadPrice -= (OrderedBread / 3) * 5;
       }
     }
   }

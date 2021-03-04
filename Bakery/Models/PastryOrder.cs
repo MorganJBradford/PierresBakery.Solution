@@ -14,11 +14,10 @@ namespace Bakery.Models
 
     public void SetPastriesPrice()
     {
-      int[] emptyIntArray = new int[OrderedPastries];
       PastriesPrice += 2 * OrderedPastries;
       if (OrderedPastries > 2)
       {
-        PastriesPrice -= emptyIntArray.Length / 3;
+        PastriesPrice -= OrderedPastries / 3;
       }
     }
   }
