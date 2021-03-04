@@ -13,10 +13,22 @@ namespace Bakery
       Console.WriteLine("Pastries: $2/each, or 3 for $5");
       Console.WriteLine("----------------------------");
       Console.WriteLine("How many loaves of bread would you like?");
-      int orderedBread = int.Parse(Console.ReadLine());
-      BreadOrder newBreadOrder = new BreadOrder(orderedBread);
+      string breadLoaves = Console.ReadLine();
+      int orderedBread;
+      bool isBreadWhole = int.TryParse(breadLoaves, out orderedBread);
+      if (orderedBread == 0 || orderedBread < 0){
+        Console.WriteLine("Please add only an intgers");
+        Main();
+      }
       Console.WriteLine("How many pastries would you like?");
-      int orderedPastries = int.Parse(Console.ReadLine());
+      string pastryPieces = Console.ReadLine();
+      int orderedPastries;
+      bool arePastriesWhole = int.TryParse(pastryPieces, out orderedPastries);
+      if (orderedPastries == 0 || orderedPastries < 0){
+        Console.WriteLine("Please add only an intgers");
+        Main();
+      }
+      BreadOrder newBreadOrder = new BreadOrder(orderedBread);
       PastryOrder newPastryOrder = new PastryOrder(orderedPastries);
       newBreadOrder.SetBreadPrice();
       newPastryOrder.SetPastriesPrice();
