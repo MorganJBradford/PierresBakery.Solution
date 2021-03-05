@@ -9,12 +9,11 @@ namespace Bakery.Models
     public PastryOrder(int orderedPastries)
     {
       OrderedPastries = orderedPastries;
-      PastriesPrice = 0;
+      PastriesPrice = 2 * OrderedPastries;
     }
 
     public void SetPastriesPrice()
     {
-      PastriesPrice += 2 * OrderedPastries;
       if (OrderedPastries > 2)
       {
         PastriesPrice -= OrderedPastries / 3;

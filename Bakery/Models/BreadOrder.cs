@@ -7,12 +7,11 @@ namespace Bakery.Models
     public BreadOrder(int breadOrder)
     {
       OrderedBread = breadOrder;
-      BreadPrice = 0;
+      BreadPrice = OrderedBread * 5;
     }
 
     public void SetBreadPrice()
     {
-      BreadPrice = OrderedBread * 5;
       if (OrderedBread > 2)
       {
         BreadPrice -= (OrderedBread / 3) * 5;
