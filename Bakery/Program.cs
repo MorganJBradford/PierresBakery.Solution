@@ -15,24 +15,35 @@ namespace Bakery
       Console.WriteLine("How many loaves of bread would you like?");
       string breadLoaves = Console.ReadLine();
       int orderedBread;
+      int total = 0;
       bool isBreadWhole = int.TryParse(breadLoaves, out orderedBread);
-      if (isBreadWhole){
+      if (isBreadWhole && orderedBread >= 0)
+      {
+        BreadOrder newBreadOrder = new BreadOrder(orderedBread);
+        newBreadOrder.SetBreadPrice();
+        total += newBreadOrder.OrderedBread;
+      }
+      else
+      {
         Console.WriteLine("Please add only an intgers");
         Main();
       }
+
       Console.WriteLine("How many pastries would you like?");
       string pastryPieces = Console.ReadLine();
       int orderedPastries;
       bool arePastriesWhole = int.TryParse(pastryPieces, out orderedPastries);
-      if (arePastriesWhole){
+      if (arePastriesWhole && orderedPastries >= 0)
+      {
+        PastryOrder newPastryOrder = new PastryOrder(orderedPastries);
+        newPastryOrder.SetPastriesPrice();
+        total += newPastryOrder.PastriesPrice;
+      }
+      else
+      {
         Console.WriteLine("Please add only an intgers");
         Main();
       }
-      BreadOrder newBreadOrder = new BreadOrder(orderedBread);
-      PastryOrder newPastryOrder = new PastryOrder(orderedPastries);
-      newBreadOrder.SetBreadPrice();
-      newPastryOrder.SetPastriesPrice();
-      int total = newBreadOrder.BreadPrice + newPastryOrder.PastriesPrice;
       Console.WriteLine($"Your total is ${total}");
       Console.WriteLine("Thank you for shopping with us!");
     }
