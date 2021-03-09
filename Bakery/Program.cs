@@ -16,7 +16,7 @@ namespace Bakery
       string breadLoaves = Console.ReadLine();
       int orderedBread;
       bool isBreadWhole = int.TryParse(breadLoaves, out orderedBread);
-      if (orderedBread == 0 || orderedBread < 0){
+      if (isBreadWhole){
         Console.WriteLine("Please add only an intgers");
         Main();
       }
@@ -24,7 +24,7 @@ namespace Bakery
       string pastryPieces = Console.ReadLine();
       int orderedPastries;
       bool arePastriesWhole = int.TryParse(pastryPieces, out orderedPastries);
-      if (orderedPastries == 0 || orderedPastries < 0){
+      if (arePastriesWhole){
         Console.WriteLine("Please add only an intgers");
         Main();
       }
